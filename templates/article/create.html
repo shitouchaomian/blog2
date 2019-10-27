@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- extends±íÃ÷´ËÒ³Ãæ¼Ì³Ğ×Ô base.html ÎÄ¼ş -->
 {% extends "base.html" %} {% load staticfiles %}
 <!-- Ğ´Èë base.html ÖĞ¶¨ÒåµÄ title -->
@@ -5,10 +6,20 @@
 <!-- Ğ´Èë base.html ÖĞ¶¨ÒåµÄ content -->
 {% block content %}
 <!-- Ğ´ÎÄÕÂ±íµ¥ -->
+=======
+<!-- extendsè¡¨æ˜æ­¤é¡µé¢ç»§æ‰¿è‡ª base.html æ–‡ä»¶ -->
+{% extends "base.html" %} {% load staticfiles %}
+<!-- å†™å…¥ base.html ä¸­å®šä¹‰çš„ title -->
+{% block title %} å†™æ–‡ç«  {% endblock title %}
+<!-- å†™å…¥ base.html ä¸­å®šä¹‰çš„ content -->
+{% block content %}
+<!-- å†™æ–‡ç« è¡¨å• -->
+>>>>>>> 9c7ead66b891f19d26eb19b9da408a87bec33ff3
 <div class="container">
     <div class="row">
         <div class="col-12">
             <br>
+<<<<<<< HEAD
             <!-- Ìá½»ÎÄÕÂµÄ±íµ¥ -->
             <form method="post" action=".">
                 <!-- DjangoÖĞĞèÒªPOSTÊı¾İµÄµØ·½¶¼±ØĞëÓĞcsrf_token -->
@@ -28,8 +39,33 @@
                 </div>
                 <!-- Ìá½»°´Å¥ -->
                 <button type="submit" class="btn btn-primary">Íê³É</button>
+=======
+            <!-- æäº¤æ–‡ç« çš„è¡¨å• -->
+            <form method="post" action=".">
+                <!-- Djangoä¸­éœ€è¦POSTæ•°æ®çš„åœ°æ–¹éƒ½å¿…é¡»æœ‰csrf_token -->
+                {% csrf_token %}
+                <!-- æ–‡ç« æ ‡é¢˜ -->
+                <div class="form-group">
+                    <!-- æ ‡ç­¾ -->
+                    <label for="title">æ–‡ç« æ ‡é¢˜</label>
+                    <!-- æ–‡æœ¬æ¡† -->
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <!-- æ–‡ç« æ­£æ–‡ -->
+                <div class="form-group">
+                    <label for="body">æ–‡ç« æ­£æ–‡</label>
+                    <!-- æ–‡æœ¬åŒºåŸŸ -->
+                    <textarea type="text" class="form-control" id="body" name="body" rows="12"></textarea>
+                </div>
+                <!-- æäº¤æŒ‰é’® -->
+                <button type="submit" class="btn btn-primary">å®Œæˆ</button>
+>>>>>>> 9c7ead66b891f19d26eb19b9da408a87bec33ff3
             </form>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 {% endblock content %}
+=======
+{% endblock content %}
+>>>>>>> 9c7ead66b891f19d26eb19b9da408a87bec33ff3

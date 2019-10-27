@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import markdown
+from django.http import HttpResponse
+from .forms import ArticlePostForm
 
+from django.contrib.auth.models import User
 # 导入数据模型ArticlePost
 from .models import ArticlePost
 from django.shortcuts import render, redirect
