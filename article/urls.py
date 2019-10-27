@@ -7,10 +7,7 @@ app_name = 'article'
 urlpatterns = [
     path('article-list/', views.article_list, name='article_list'),
     path('article-detail/<int:id>/', views.article_detail, name='article_detail'),
-<<<<<<< HEAD
     path('article-create/', views.article_create, name='article_create'),
-=======
     path('article-create/',views.article_create,name='article_create'),
->>>>>>> 9c7ead66b891f19d26eb19b9da408a87bec33ff3
     # 目前还没有urls
 ]
