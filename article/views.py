@@ -16,7 +16,7 @@ from django.contrib.auth.models import User
 
 
 def article_list(request):
-    # 取出所有博客文章
+    # .models中的ArticlePost继承于model.Model,objects.all意思就是
     articles = ArticlePost.objects.all()
     # 需要传递给模板（templates）的对象
     context = { 'articles': articles }
@@ -67,3 +67,12 @@ def article_create(request):
         context = { 'article_post_form': article_post_form }
         # 返回模板
         return render(request, 'article/create.html', context)
+
+# 删文章
+def article_delete(request, id):
+    # 根据 id 获取需要删除的文章
+    article = ArticlePost.objects.get(id=id)
+    # 调用.delete()方法删除文章
+    article.delete()
+    # 完成删除后返回文章列表
+    return redirect("article:article_list")
