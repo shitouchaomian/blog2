@@ -87,7 +87,7 @@ def article_safe_delete(request,id):
         
 #更改文章
 
-def article_update(request, id):
+def article_update(request, article_id):
     """
     更新文章的视图函数
     通过POST方法提交表单，更新titile、body字段
@@ -96,7 +96,7 @@ def article_update(request, id):
     """
 
     # 获取需要修改的具体文章对象
-    article = ArticlePost.objects.get(id=id)
+    article = ArticlePost.objects.get(id=article_id)
     # 判断用户是否为 POST 提交表单数据
     if request.method == "POST":
         # 将提交的数据赋值到表单实例中
@@ -108,7 +108,7 @@ def article_update(request, id):
             article.body = request.POST['body']
             article.save()
             # 完成后返回到修改后的文章中。需传入文章的 id 值
-            return redirect("article:article_detail", id=id)
+            return redirect("article:article_detail", id=article_id)
         # 如果数据不合法，返回错误信息
         else:
             return HttpResponse("表单内容有误，请重新填写。")
