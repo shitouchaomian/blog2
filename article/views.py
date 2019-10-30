@@ -95,7 +95,7 @@ def article_update(request,id):
         #将提交的数据赋值到表单实例中
         article_post_form = ArticlePostForm(data=request.POST)
         #判断提交的数据是否满足模型的要求
-        if article_post_form.is_valid()
+        if article_post_form.is_valid():
         #保存新写入的title、body 数据并保存
             article.title = request.POST['title']
             article.body = request.POST['body']
